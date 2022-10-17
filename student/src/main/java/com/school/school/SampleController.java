@@ -22,8 +22,9 @@ public class SampleController {
 			ArrayList<StudentEntity> transformedvalues=new ArrayList<StudentEntity>();
 	    	for(StudentEntity emt:sr.findAll()) {
 	    		StudentEntity temp=new StudentEntity();
-	    		temp.setId(emt.getId());
+	    		
 	    		if(emt.getDate_of_Join().contains("2000-01-01")) {
+	    			temp.setId(emt.getId());
 	    			temp.setDate_of_Join(emt.getDate_of_Join());
 	    			temp.setStudent_Name(emt.getStudent_Name());
 	    		}
