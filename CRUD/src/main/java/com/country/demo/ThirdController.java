@@ -7,23 +7,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SampleController {
+public class ThirdController {
 	@Autowired
 	private EmployeeRepo er;// up to date
 
-	@GetMapping("/sample") 
+	@GetMapping("/employee") 
 	
-	public List<EmployeeEntity> getSample(){
-		ArrayList<EmployeeEntity> transformedvalues=new ArrayList<EmployeeEntity>();
+	public ArrayList<String> getempname(){
+		ArrayList<String> ename=new ArrayList<String>();
     	for(EmployeeEntity emt:er.findAll()) {
-    		EmployeeEntity temp=new EmployeeEntity();
-    		temp.setId(emt.getId());
+
     		
-    			temp.setEmployee_name(emt.getEmployee_name());
-    		
-    		transformedvalues.add(temp);
-    	}
-    	return transformedvalues;
+    		    		 			 			
+        		
+        		
+		   		
+        		ename.add(emt.getEmployee_name());
+    		}
+
+    	
+    	return ename;
 	}
 
 }

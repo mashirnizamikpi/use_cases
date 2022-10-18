@@ -1,29 +1,40 @@
 package com.country.demo;
 
 import java.util.ArrayList;
-import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SampleController {
+public class FourthController {
 	@Autowired
 	private EmployeeRepo er;// up to date
 
-	@GetMapping("/sample") 
+	@GetMapping("/A") 
 	
-	public List<EmployeeEntity> getSample(){
-		ArrayList<EmployeeEntity> transformedvalues=new ArrayList<EmployeeEntity>();
+	public ArrayList<EmployeeEntity> getemname(){
+		ArrayList<EmployeeEntity> emp=new ArrayList<EmployeeEntity>();
     	for(EmployeeEntity emt:er.findAll()) {
+    	
     		EmployeeEntity temp=new EmployeeEntity();
-    		temp.setId(emt.getId());
     		
-    			temp.setEmployee_name(emt.getEmployee_name());
+    		if(emt.getEmployee_name().startsWith("a")) {
+    		 temp.setId(emt.getId());
     		
-    		transformedvalues.add(temp);
-    	}
-    	return transformedvalues;
-	}
+			temp.setEmployee_name(emt.getEmployee_name());
+		
+		emp.add(temp);
 
+    		}
+    		    		 			 			
+    		
+		
+    		
+
+    	
+	}
+		return emp;
+
+}
 }
