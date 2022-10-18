@@ -17,11 +17,7 @@ public class SecondController {
 		ArrayList<Integer> eid=new ArrayList<Integer>();
     	for(EmployeeEntity emt:er.findAll()) {
 
-    		
-    		    		 			 			
-        		
-        		
-		   		
+    			
     		eid.add(emt.getId());
     		}
 

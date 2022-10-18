@@ -18,10 +18,7 @@ public class ThirdController {
     	for(EmployeeEntity emt:er.findAll()) {
 
     		
-    		    		 			 			
-        		
-        		
-		   		
+    	
         		ename.add(emt.getEmployee_name());
     		}
 
