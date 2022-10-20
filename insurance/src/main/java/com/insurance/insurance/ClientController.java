@@ -1,5 +1,6 @@
 package com.insurance.insurance;
 
+import java.io.Console;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ public class ClientController {
 
 	@Autowired
 	private Client1Repo cl;
+	
+
 
 
 
@@ -18,6 +21,7 @@ public class ClientController {
  public List<Client1Entity> getSample(){
     	
     	
+    	 	
     	return cl.getjoin();
     }
     
@@ -53,6 +57,9 @@ public class ClientController {
     	
     	return cl.getjoin5();
     }
+    
+    
+
 
 
     }
