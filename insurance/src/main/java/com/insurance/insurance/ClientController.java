@@ -75,6 +75,7 @@ public class ClientController {
 
 	public int discount(@PathVariable String term_plan, @PathVariable int discount) {
 
+		
 		final String more = "morethanfive";
 		final String less = "lessthanfive";
 		final String equal = "equaltofive";
@@ -82,6 +83,8 @@ public class ClientController {
 		int per = 0;
 
 		if (term_plan.equals(less)) {
+			
+			per = 0;
 
 		}
 
