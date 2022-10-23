@@ -23,35 +23,37 @@ public class ClientController {
 		return cl.getjoin();
 	}
 
-	@GetMapping("/detail/10263")
-	public List<Client1Entity> getSample1() {
+	@GetMapping("/detail/{policy}")
+	public List<Client1Entity> discount(@PathVariable int policy) {
 
-		return cl.getjoin1();
-	}
+		
+		if (policy==10263) {
+			
+			return cl.getjoin1();
+			}
+		
+		else if (policy==10265) {
+			
+			return cl.getjoin2();
+			}
+		
+		else if (policy==10267) {
+			
+			return cl.getjoin3();
+			}
+		else if (policy==50230) {
+			
+			return cl.getjoin4();
+			}
+		else if (policy==50236) {
+			
+			return cl.getjoin5();
+			}
+		return null;
 
-	@GetMapping("/detail/10265")
-	public List<Client1Entity> getSample2() {
 
-		return cl.getjoin2();
-	}
+}
 
-	@GetMapping("/detail/10267")
-	public List<Client1Entity> getSample3() {
-
-		return cl.getjoin3();
-	}
-
-	@GetMapping("/detail/50230")
-	public List<Client1Entity> getSample4() {
-
-		return cl.getjoin4();
-	}
-
-	@GetMapping("/detail/50236")
-	public List<Client1Entity> getSample5() {
-
-		return cl.getjoin5();
-	}
 
 	@GetMapping("/equaltofive")
 	public List<Client1Entity> getSample6() {
