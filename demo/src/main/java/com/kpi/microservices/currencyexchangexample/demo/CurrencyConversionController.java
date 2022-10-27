@@ -18,6 +18,7 @@ public class CurrencyConversionController {
 	final String equal = "USD";
 	final String rus = "RUBLE";
 	  final String jap = "YEN";
+	   
 
 	 double per=0;
 	 double mul=0;
@@ -74,9 +75,7 @@ if(from.equals(ind)) {
 		}
 	
 
-	
+    return new CurrencyConversionBean( 1L, from, to, mul,quantity, per, 8100);
 
-    return new CurrencyConversionBean( null, from, to, mul,quantity, per, 0);
-       
   }
 }

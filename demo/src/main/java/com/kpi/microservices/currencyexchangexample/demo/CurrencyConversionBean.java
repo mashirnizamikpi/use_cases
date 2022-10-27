@@ -1,5 +1,5 @@
 package com.kpi.microservices.currencyexchangexample.demo;  
-import java.math.BigDecimal;  
+
 public class CurrencyConversionBean {
 	  private Long id;
 	  private String from;
