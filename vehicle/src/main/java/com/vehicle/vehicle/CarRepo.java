@@ -16,6 +16,7 @@ public interface CarRepo extends JpaRepository<CarEntity,Integer>
 	@Query(value = "Select * From truck t JOIN car c ON t.no_ofTyres=c.no_ofTyres group by c.carid ",nativeQuery=true)
 public List<CarEntity> getjoinred();	
 	
-
+	@Query(value = "Select * From car ",nativeQuery=true)
+public List<CarEntity> getcar();
 
 }

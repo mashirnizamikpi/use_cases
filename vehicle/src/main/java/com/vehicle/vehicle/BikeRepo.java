@@ -17,6 +17,7 @@ public interface BikeRepo extends JpaRepository<BikeEntity,Integer>
 public List<BikeEntity> getjoinbike();	
 	@Query(value = "Select * From car c JOIN bike b ON b.no_ofTyres=c.no_ofTyres ",nativeQuery=true)
 public List<BikeEntity> getjoinbikeq();	
-	
+	@Query(value = "Select * From bike ",nativeQuery=true)
+public List<BikeEntity> getbike();
 
 }
