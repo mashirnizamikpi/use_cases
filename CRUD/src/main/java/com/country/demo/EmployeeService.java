@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 	    		EmployeeEntity temp=new EmployeeEntity();
 	    		temp.setId(emt.getId());
 	    		temp.setEmployee_name(emt.getEmployee_name());
+	    		temp.setDepartment(emt.getDepartment());
 	    		transformedvalues.add(temp);
 	    		}
 	    	return transformedvalues;	
